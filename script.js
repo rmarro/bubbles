@@ -45,6 +45,7 @@ function createGrid(parentCell, count=null) {
 }
 
 function handleTouchmove (event) {
+    event.preventDefault()
     const cell = document.elementFromPoint(event.touches[0].clientX, event.touches[0].clientY);
     const level = cell.dataset.level;
     const ignore = !cell.classList.contains(`bubble-${level}`) || popAction != 'mouseover';
