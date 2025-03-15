@@ -3,44 +3,244 @@
     flex-wrap: wrap;
     width: 95vw;
     height: 95vw;
+    max-width: 1000px;
+    max-height: 1000px;
 }
 
-div {
+.input-row {
+    margin: 1vw;
+    margin-bottom: 2vw;
+}
+
+span {
+    margin-right: 1vw;
+}
+
+.cell {
     display: flex;
     flex-wrap: wrap;
     border-radius: 50%;
     width: 50%;
     height: 50%;
     box-sizing: border-box;
-    opacity: 85%;
 }
 
-.bubble-1 {
-    border: 1px solid red;
-    background: red;
+.rainbow {
+    .bubble-1 {
+        border: 3px solid #DC3B40;
+        .filled & {
+            background: #DC3B40;
+        }
+    }
+
+    .bubble-2 {
+        border: 3px solid #FA7B39;
+        .filled & {
+            background: #FA7B39;
+        }
+    }
+
+    .bubble-3 {
+        border: 3px solid #E7BB12;
+        .filled & {
+            background: #E7BB12;
+        }
+    }
+
+    .bubble-4 {
+        border: 3px solid #77AC08;
+        .filled & {
+            background: #77AC08;
+        }
+    }
+
+    .bubble-5 {
+        border: 3px solid #1272D8;
+        .filled & {
+            background: #1272D8;
+        }
+    }
+
+    .bubble-6 {
+        border: 3px solid #4E3380;
+        .filled & {
+            background: #4E3380;
+        }
+    }
 }
 
-.bubble-2 {
-    border: 1px solid orange;
-    background: orange;
+.earth {
+    .bubble-1 {
+        border: 3px solid #007250;
+        .filled & {
+            background: #007250;
+        }
+    }
+
+    .bubble-2 {
+        border: 3px solid #2B8249;
+        .filled & {
+            background: #2B8249;
+        }
+    }
+
+    .bubble-3 {
+        border: 3px solid #589E4B;
+        .filled & {
+            background: #589E4B;
+        }
+    }
+
+    .bubble-4 {
+        border: 3px solid #88C14F;
+        .filled & {
+            background: #88C14F;
+        }
+    }
+
+    .bubble-5 {
+        border: 3px solid #B8E052;
+        .filled & {
+            background: #B8E052;
+        }
+    }
+
+    .bubble-6 {
+        border: 3px solid #E0F752;
+        .filled & {
+            background: #E0F752;
+        }
+    }
 }
 
-.bubble-3 {
-    border: 1px solid yellow;
-    background: yellow;
+.air {
+    .bubble-1 {
+        border: 3px solid #F1C31A;
+        .filled & {
+            background: #F1C31A;
+        }
+    }
+
+    .bubble-2 {
+        border: 3px solid #E2A218;
+        .filled & {
+            background: #E2A218;
+        }
+    }
+
+    .bubble-3 {
+        border: 3px solid #D58F03;
+        .filled & {
+            background: #D58F03;
+        }
+    }
+
+    .bubble-4 {
+        border: 3px solid #BBBA9F;
+        .filled & {
+            background: #BBBA9F;
+        }
+    }
+
+    .bubble-5 {
+        border: 3px solid #CDCAB3;
+        .filled & {
+            background: #CDCAB3;
+        }
+    }
+
+    .bubble-6 {
+        border: 3px solid #DDDCD5;
+        .filled & {
+            background: #DDDCD5;
+        }
+    }
 }
 
-.bubble-4 {
-    border: 1px solid green;
-    background: green;
+.fire {
+    .bubble-1 {
+        border: 3px solid #FF0801;
+        .filled & {
+            background: #FF0801;
+        }
+    }
+
+    .bubble-2 {
+        border: 3px solid #E60601;
+        .filled & {
+            background: #E60601;
+        }
+    }
+
+    .bubble-3 {
+        border: 3px solid #CC0501;
+        .filled & {
+            background: #CC0501;
+        }
+    }
+
+    .bubble-4 {
+        border: 3px solid #B30301;
+        .filled & {
+            background: #B30301;
+        }
+    }
+
+    .bubble-5 {
+        border: 3px solid #9C0201;
+        .filled & {
+            background: #9C0201;
+        }
+    }
+
+    .bubble-6 {
+        border: 3px solid #730001;
+        .filled & {
+            background: #730001;
+        }
+    }
 }
 
-.bubble-5 {
-    border: 1px solid blue;
-    background: blue;
-}
+.water {
+    .bubble-1 {
+        border: 3px solid #0BA5A4;
+        .filled & {
+            background: #0BA5A4;
+        }
+    }
 
-.bubble-6 {
-    border: 1px solid purple;
-    background: purple;
+    .bubble-2 {
+        border: 3px solid #44B9BD;
+        .filled & {
+            background: #44B9BD;
+        }
+    }
+
+    .bubble-3 {
+        border: 3px solid #99D9DF;
+        .filled & {
+            background: #99D9DF;
+        }
+    }
+
+    .bubble-4 {
+        border: 3px solid #68B7D0;
+        .filled & {
+            background: #68B7D0;
+        }
+    }
+
+    .bubble-5 {
+        border: 3px solid #3D92C2;
+        .filled & {
+            background: #3D92C2;
+        }
+    }
+
+    .bubble-6 {
+        border: 3px solid #2E5D96;
+        .filled & {
+            background: #2E5D96;
+        }
+    }
 }
