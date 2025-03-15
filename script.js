@@ -1,5 +1,6 @@
 const gameContainer = document.getElementById('game-container');
 gameContainer.dataset.level = -1;
+gameContainer.addEventListener('touchmove', handleTouchmove);
 let popAction = document.getElementById('pop-action').value;
 
 function setPopAction(value) {
@@ -43,22 +44,29 @@ function createGrid(parentCell, count=null) {
     }
 }
 
+function handleTouchmove (event) {
+    const cell = document.elementFromPoint(event.touches[0].clientX, event.touches[0].clientY);
+    const level = cell.dataset.level;
+    const ignore = !cell.classList.contains(`bubble-${level}`) || popAction != 'mouseover';
+    convertCellToGrid (cell, ignore);
+}
+
 function handleCellInteraction (event) {
     const cell = event.target;
-    const level = cell.dataset.level;
     const ignore = (event.type != popAction);
+    convertCellToGrid (cell, ignore);
+}
+
+function convertCellToGrid (cell, ignore) {
+    const level = cell.dataset.level;
 
     if (ignore || level === '6') {
         return
     }
 
     removeListeners(cell);
-    const timeout = (popAction === 'click') ? 0 : 25;
-
-    setTimeout(() => {
-        cell.classList.remove(`bubble-${level}`);
-        createGrid(cell)
-    }, timeout);
+    cell.classList.remove(`bubble-${level}`);
+    createGrid(cell);
 }
 
 function removeListeners(cell) {
