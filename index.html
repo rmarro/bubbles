@@ -4,27 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Bubbles</title>
 </head>
 <body>
     <div class="input-row">
         <span>How many rows would you like to start with?</span><input type="number" step="1" value="2" oninput="initializeGrid(this.value)"/></input>
     </div>
     <div class="input-row">
-        <span>What style would you like?</span>
-        <select oninput="setStyle(this.value)">
-            <option value="rainbow">Rainbow - Empty</option>
-            <option value="rainbow filled">Rainbow - Filled</option>
-            <option value="earth">Earth - Empty</option>
-            <option value="earth filled">Earth - Filled</option>
-            <option value="air">Air - Empty</option>
-            <option value="air filled">Air - Filled</option>
-            <option value="fire">Fire - Empty</option>
-            <option value="fire filled">Fire - Filled</option>
-            <option value="water">Water - Empty</option>
-            <option value="water filled">Water - Filled</option>
+        <span>Pop bubbles with:</span>
+        <select id="pop-action" oninput="setPopAction(this.value)">
+            <option value="click">Click</option>
+            <option value="mouseover">Mouseover</option>
         </select>
     </div>
+    <div class="input-row">
+        <span>What style would you like?</span>
+        <select oninput="setStyle(this.value)">
+            <option value="rainbow">Rainbow</option>
+            <option value="spa-1">Spa 1</option>
+            <option value="spa-2">Spa 2</option>
+            <option value="spa-3">Spa 3</option>
+            <option value="spa-4">Spa 4</option>
+            <option value="earth">Earth</option>
+            <option value="air">Air</option>
+            <option value="fire">Fire</option>
+            <option value="water">Water</option>
+        </select>
+        <label for="filled">Filled</label>
+        <input id="filled" type="checkbox" oninput="setFilled(this.checked)"/>
+    </div>
+    <br/>
     <div id="game-container"></div>
     <script src="script.js"></script>
 </body>
