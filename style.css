@@ -3,13 +3,12 @@
     flex-wrap: wrap;
     width: 95vw;
     height: 95vw;
-    max-width: 1000px;
-    max-height: 1000px;
+    max-width: 625px;
+    max-height: 625px;
 }
 
 .input-row {
     margin: 1vw;
-    margin-bottom: 2vw;
     font-family: sans-serif;
 }
 
@@ -24,10 +23,17 @@ span {
     width: 50%;
     height: 50%;
     box-sizing: border-box;
+
+    &[data-level="0"] {
+        width: 95vw;
+        height: 95vw;
+        max-width: 625px;
+        max-height: 625px;
+    }
 }
 
 .rainbow {
-    .bubble-1 {
+    .bubble-1, .bubble-0 {
         border: 3px solid #DC3B40;
         .filled & {
             background: #DC3B40;
@@ -63,7 +69,7 @@ span {
     }
 
     .bubble-6 {
-        border: 3px solid #4E3380;
+        border: 2.5px solid #4E3380;
         .filled & {
             background: #4E3380;
         }
@@ -71,7 +77,7 @@ span {
 }
 
 .spa-1 {
-    .bubble-1 {
+    .bubble-1, .bubble-0 {
         border: 3px solid #d7dfae;
         .filled & {
             background: #d7dfae;
@@ -93,9 +99,9 @@ span {
     }
 
     .bubble-4 {
-        border: 3px solid #faf1ee;
+        border: 3px solid #f1e6e3;
         .filled & {
-            background: #faf1ee;
+            background: #f1e6e3;
         }
     }
 
@@ -107,7 +113,7 @@ span {
     }
 
     .bubble-6 {
-        border: 3px solid #f4bf95;
+        border: 2.5px solid #f4bf95;
         .filled & {
             background: #f4bf95;
         }
@@ -116,7 +122,7 @@ span {
 
 .spa-2 {
     opacity: 80%;
-    .bubble-1 {
+    .bubble-1, .bubble-0 {
         border: 3px solid #954631;
         .filled & {
             background: #954631;
@@ -152,7 +158,7 @@ span {
     }
 
     .bubble-6 {
-        border: 3px solid #4e8074;
+        border: 2.5px solid #4e8074;
         .filled & {
             background: #4e8074;
         }
@@ -160,7 +166,7 @@ span {
 }
 
 .spa-3 {
-    .bubble-1 {
+    .bubble-1, .bubble-0 {
         border: 3px solid #FFD1A7;
         .filled & {
             background: #FFD1A7;
@@ -196,7 +202,7 @@ span {
     }
 
     .bubble-6 {
-        border: 3px solid #E2A84E;
+        border: 2.5px solid #E2A84E;
         .filled & {
             background: #E2A84E;
         }
@@ -205,7 +211,7 @@ span {
 
 .spa-4 {
     opacity: 75%;
-    .bubble-1 {
+    .bubble-1, .bubble-0 {
         border: 3px solid #481944;
         .filled & {
             background: #481944;
@@ -227,9 +233,9 @@ span {
     }
 
     .bubble-4 {
-        border: 3px solid #fcecd4;
+        border: 3px solid #f4e3cb;
         .filled & {
-            background: #fcecd4;
+            background: #f4e3cb;
         }
     }
 
@@ -241,7 +247,7 @@ span {
     }
 
     .bubble-6 {
-        border: 3px solid #1fb7b0;
+        border: 2.5px solid #1fb7b0;
         .filled & {
             background: #1fb7b0;
         }
@@ -249,7 +255,7 @@ span {
 }
 
 .earth {
-    .bubble-1 {
+    .bubble-1, .bubble-0 {
         border: 3px solid #007250;
         .filled & {
             background: #007250;
@@ -285,7 +291,7 @@ span {
     }
 
     .bubble-6 {
-        border: 3px solid #E0F752;
+        border: 2.5px solid #E0F752;
         .filled & {
             background: #E0F752;
         }
@@ -293,7 +299,7 @@ span {
 }
 
 .air {
-    .bubble-1 {
+    .bubble-1, .bubble-0 {
         border: 3px solid #F1C31A;
         .filled & {
             background: #F1C31A;
@@ -329,7 +335,7 @@ span {
     }
 
     .bubble-6 {
-        border: 3px solid #DDDCD5;
+        border: 2.5px solid #DDDCD5;
         .filled & {
             background: #DDDCD5;
         }
@@ -337,7 +343,7 @@ span {
 }
 
 .fire {
-    .bubble-1 {
+    .bubble-1, .bubble-0 {
         border: 3px solid #560410;
         .filled & {
             background: #560410;
@@ -373,7 +379,7 @@ span {
     }
 
     .bubble-6 {
-        border: 3px solid #ffa600;
+        border: 2.5px solid #ffa600;
         .filled & {
             background: #ffa600;
         }
@@ -381,7 +387,7 @@ span {
 }
 
 .water {
-    .bubble-1 {
+    .bubble-1, .bubble-0 {
         border: 3px solid #0BA5A4;
         .filled & {
             background: #0BA5A4;
@@ -417,7 +423,7 @@ span {
     }
 
     .bubble-6 {
-        border: 3px solid #2E5D96;
+        border: 2.5px solid #2E5D96;
         .filled & {
             background: #2E5D96;
         }
