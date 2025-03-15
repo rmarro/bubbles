@@ -70,6 +70,184 @@ span {
     }
 }
 
+.spa-1 {
+    .bubble-1 {
+        border: 3px solid #d7dfae;
+        .filled & {
+            background: #d7dfae;
+        }
+    }
+
+    .bubble-2 {
+        border: 3px solid #a7c3b5;
+        .filled & {
+            background: #a7c3b5;
+        }
+    }
+
+    .bubble-3 {
+        border: 3px solid #e7e3d5;
+        .filled & {
+            background: #e7e3d5;
+        }
+    }
+
+    .bubble-4 {
+        border: 3px solid #faf1ee;
+        .filled & {
+            background: #faf1ee;
+        }
+    }
+
+    .bubble-5 {
+        border: 3px solid #f4d2bc;
+        .filled & {
+            background: #f4d2bc;
+        }
+    }
+
+    .bubble-6 {
+        border: 3px solid #f4bf95;
+        .filled & {
+            background: #f4bf95;
+        }
+    }
+}
+
+.spa-2 {
+    opacity: 80%;
+    .bubble-1 {
+        border: 3px solid #954631;
+        .filled & {
+            background: #954631;
+        }
+    }
+
+    .bubble-2 {
+        border: 3px solid #d49064;
+        .filled & {
+            background: #d49064;
+        }
+    }
+
+    .bubble-3 {
+        border: 3px solid #f9ba76;
+        .filled & {
+            background: #f9ba76;
+        }
+    }
+
+    .bubble-4 {
+        border: 3px solid #295e65;
+        .filled & {
+            background: #295e65;
+        }
+    }
+
+    .bubble-5 {
+        border: 3px solid #32303f;
+        .filled & {
+            background: #32303f;
+        }
+    }
+
+    .bubble-6 {
+        border: 3px solid #4e8074;
+        .filled & {
+            background: #4e8074;
+        }
+    }
+}
+
+.spa-3 {
+    .bubble-1 {
+        border: 3px solid #FFD1A7;
+        .filled & {
+            background: #FFD1A7;
+        }
+    }
+
+    .bubble-2 {
+        border: 3px solid #FFC0A5;
+        .filled & {
+            background: #FFC0A5;
+        }
+    }
+
+    .bubble-3 {
+        border: 3px solid #BEB4B4;
+        .filled & {
+            background: #BEB4B4;
+        }
+    }
+
+    .bubble-4 {
+        border: 3px solid #CECFD7;
+        .filled & {
+            background: #CECFD7;
+        }
+    }
+
+    .bubble-5 {
+        border: 3px solid #ECDECA;
+        .filled & {
+            background: #ECDECA;
+        }
+    }
+
+    .bubble-6 {
+        border: 3px solid #E2A84E;
+        .filled & {
+            background: #E2A84E;
+        }
+    }
+}
+
+.spa-4 {
+    opacity: 75%;
+    .bubble-1 {
+        border: 3px solid #481944;
+        .filled & {
+            background: #481944;
+        }
+    }
+
+    .bubble-2 {
+        border: 3px solid #5b205a;
+        .filled & {
+            background: #5b205a;
+        }
+    }
+
+    .bubble-3 {
+        border: 3px solid #844c85;
+        .filled & {
+            background: #844c85;
+        }
+    }
+
+    .bubble-4 {
+        border: 3px solid #fcecd4;
+        .filled & {
+            background: #fcecd4;
+        }
+    }
+
+    .bubble-5 {
+        border: 3px solid #dccaac;
+        .filled & {
+            background: #dccaac;
+        }
+    }
+
+    .bubble-6 {
+        border: 3px solid #1fb7b0;
+        .filled & {
+            background: #1fb7b0;
+        }
+    }
+}
+
 .earth {
     .bubble-1 {
         border: 3px solid #007250;
