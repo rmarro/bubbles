@@ -160,44 +160,44 @@ span {
 
 .fire {
     .bubble-1 {
-        border: 3px solid #FF0801;
+        border: 3px solid #560410;
         .filled & {
-            background: #FF0801;
+            background: #560410;
         }
     }
 
     .bubble-2 {
-        border: 3px solid #E60601;
+        border: 3px solid #8c000e;
         .filled & {
-            background: #E60601;
+            background: #8c000e;
         }
     }
 
     .bubble-3 {
-        border: 3px solid #CC0501;
+        border: 3px solid #d31522;
         .filled & {
-            background: #CC0501;
+            background: #d31522;
         }
     }
 
     .bubble-4 {
-        border: 3px solid #B30301;
+        border: 3px solid #ff4417;
         .filled & {
-            background: #B30301;
+            background: #ff4417;
         }
     }
 
     .bubble-5 {
-        border: 3px solid #9C0201;
+        border: 3px solid #ff6e00;
         .filled & {
-            background: #9C0201;
+            background: #ff6e00;
         }
     }
 
     .bubble-6 {
-        border: 3px solid #730001;
+        border: 3px solid #ffa600;
         .filled & {
-            background: #730001;
+            background: #ffa600;
         }
     }
 }
