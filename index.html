@@ -8,7 +8,14 @@
 </head>
 <body>
     <div class="input-row">
-        <span>How many rows would you like to start with?</span><input type="number" step="1" value="2" oninput="initializeGrid(this.value)"/></input>
+        <span>How many bubbles would you like to start with?</span>
+        <select oninput="initializeGrid(this.value)">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
     </div>
     <div class="input-row">
         <span>Pop bubbles with:</span>
