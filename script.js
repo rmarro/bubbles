@@ -21,6 +21,9 @@ function setFilled(value) {
 }
 
 function initializeGrid (value) {
+    if (value === "5") {
+        alert('r u ok?')
+    }
     gameContainer.innerHTML = '';
     createGrid(gameContainer, value);
 }
