@@ -7,6 +7,24 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="input-row">
+        <span>How many rows would you like to start with?</span><input type="number" step="1" value="2" oninput="initializeGrid(this.value)"/></input>
+    </div>
+    <div class="input-row">
+        <span>What style would you like?</span>
+        <select oninput="setStyle(this.value)">
+            <option value="rainbow">Rainbow - Empty</option>
+            <option value="rainbow filled">Rainbow - Filled</option>
+            <option value="earth">Earth - Empty</option>
+            <option value="earth filled">Earth - Filled</option>
+            <option value="air">Air - Empty</option>
+            <option value="air filled">Air - Filled</option>
+            <option value="fire">Fire - Empty</option>
+            <option value="fire filled">Fire - Filled</option>
+            <option value="water">Water - Empty</option>
+            <option value="water filled">Water - Filled</option>
+        </select>
+    </div>
     <div id="game-container"></div>
     <script src="script.js"></script>
 </body>
