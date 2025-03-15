@@ -1,5 +1,5 @@
 const gameContainer = document.getElementById('game-container');
-gameContainer.dataset.level = 0;
+gameContainer.dataset.level = -1;
 let popAction = document.getElementById('pop-action').value;
 
 function setPopAction(value) {
@@ -25,11 +25,11 @@ function initializeGrid (value) {
     createGrid(gameContainer, value);
 }
 
-function createGrid(parentCell, rows=null) {
-    rows ||= 2
-    const newLevel = parseInt(parentCell.dataset.level) + 1
+function createGrid(parentCell, count=null) {
+    count ||= 4;
+    const newLevel = parseInt(parentCell.dataset.level) + 1;
 
-    for (let i = 0; i < rows * 2; i++) {
+    for (let i = 0; i < count; i++) {
         const cell = document.createElement('div');
         cell.classList.add(`bubble-${newLevel}`);
         cell.classList.add('cell');
@@ -63,5 +63,5 @@ function removeListeners(cell) {
     cell.removeEventListener('mouseover', handleCellInteraction);
 }
 
-createGrid(gameContainer, 2)
+initializeGrid(1)
 setStyle("rainbow")
