@@ -31,6 +31,19 @@ span {
         max-width: 625px;
         max-height: 625px;
     }
+
+    .squares & {
+        border-radius: 0;
+        .filled & {
+            &[class^="bubble-"]{
+                border: .25px solid grey;
+            }
+        }
+    }
+
+    .circley-squares & {
+        border-radius: 25%;
+    }
 }
 
 .rainbow {
