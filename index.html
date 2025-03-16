@@ -48,7 +48,11 @@
             <option value="circley-squares">Circley-squares</option>
         </select>
     </div>
-    <div class="input-row"><button onclick="restart()">Restart</button></div>
+    <div class="input-row">
+        <button onclick="restart()">Restart</button>
+        <label for="reverse">Reverse Mode</label>
+        <input id="reverse" type="checkbox" oninput="setReverseMode(this.checked)"/>
+    </div>
     <br/>
     <div id="game-container"></div>
     <script src="script.js"></script>
