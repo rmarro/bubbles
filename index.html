@@ -9,7 +9,7 @@
 <body>
     <div class="input-row">
         <span>How many bubbles would you like to start with?</span>
-        <select oninput="initializeGrid(this.value)">
+        <select id="bubble-count" oninput="initializeGrid(this.value)">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -40,6 +40,15 @@
         <label for="filled">Filled</label>
         <input id="filled" type="checkbox" oninput="setFilled(this.checked)"/>
     </div>
+    <div class="input-row">
+        <span>What kind of bubbles?</span>
+        <select id="shape" oninput="setShape(this.value)">
+            <option value="">Circles</option>
+            <option value="squares">Squares</option>
+            <option value="circley-squares">Circley-squares</option>
+        </select>
+    </div>
+    <div class="input-row"><button onclick="restart()">Restart</button></div>
     <br/>
     <div id="game-container"></div>
     <script src="script.js"></script>
