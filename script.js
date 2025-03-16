@@ -21,12 +21,23 @@ function setFilled(value) {
     }
 }
 
+function setShape(value) {
+    gameContainer.classList.remove(...['squares','circley-squares']);
+    gameContainer.classList.add(value);
+}
+
 function initializeGrid (value) {
     if (value === "5") {
         alert('r u ok?')
     }
     gameContainer.innerHTML = '';
     createGrid(gameContainer, value);
+}
+
+function restart () {
+    const count = document.getElementById('bubble-count').value
+    gameContainer.innerHTML = '';
+    createGrid(gameContainer, count);
 }
 
 function createGrid(parentCell, count=null) {
