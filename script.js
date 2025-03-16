@@ -2,9 +2,14 @@ const gameContainer = document.getElementById('game-container');
 gameContainer.dataset.level = -1;
 gameContainer.addEventListener('touchmove', handleTouchmove);
 let popAction = document.getElementById('pop-action').value;
+let reverseMode = false;
 
 function setPopAction(value) {
     popAction = value;
+}
+
+function setReverseMode(value) {
+    reverseMode = value;
 }
 
 function setStyle(classes) {
@@ -49,8 +54,7 @@ function createGrid(parentCell, count=null) {
         cell.classList.add(`bubble-${newLevel}`);
         cell.classList.add('cell');
         cell.dataset.level = newLevel;
-        cell.addEventListener('click', handleCellInteraction);
-        cell.addEventListener('mouseover', handleCellInteraction);
+        addListeners(cell);
         parentCell.appendChild(cell);
     }
 }
@@ -59,20 +63,35 @@ function handleTouchmove (event) {
     event.preventDefault()
     const cell = document.elementFromPoint(event.touches[0].clientX, event.touches[0].clientY);
     const level = cell.dataset.level;
-    const ignore = !cell.classList.contains(`bubble-${level}`) || popAction != 'mouseover';
-    convertCellToGrid (cell, ignore);
+    if (!cell.classList.contains(`bubble-${level}`) || popAction != 'mouseover') {
+        return
+    }
+
+    if (reverseMode && popAction === 'mouseover') {
+        reverseCell(cell);
+    } else {
+        convertCellToGrid(cell);
+    }
 }
 
 function handleCellInteraction (event) {
+    if (event.type != popAction) {
+        return
+    }
+
     const cell = event.target;
-    const ignore = (event.type != popAction);
-    convertCellToGrid (cell, ignore);
+
+    if (reverseMode) {
+        event.stopPropagation()
+        reverseCell(cell);
+    } else {
+        convertCellToGrid(cell);
+    }
 }
 
-function convertCellToGrid (cell, ignore) {
+function convertCellToGrid (cell) {
     const level = cell.dataset.level;
-
-    if (ignore || level === '6') {
+    if (level === '6') {
         return
     }
 
@@ -81,9 +100,34 @@ function convertCellToGrid (cell, ignore) {
     createGrid(cell);
 }
 
+function reverseCell(cell) {
+    if (cell.dataset.level === '0') {
+        return
+    }
+    parentCell = cell.parentElement;
+
+    let hasGrandchildren = false
+    for (const child of parentCell.children) {
+        if (child.hasChildNodes()) {
+            hasGrandchildren = true
+        }
+    }
+    if (popAction === 'mouseover' && hasGrandchildren) {
+        return
+    }
+
+    parentCell.innerHTML = '';
+    parentCell.classList.add(`bubble-${parentCell.dataset.level}`);
+    addListeners(parentCell);
+}
+
 function removeListeners(cell) {
     cell.removeEventListener('click', handleCellInteraction);
     cell.removeEventListener('mouseover', handleCellInteraction);
+}
+function addListeners(cell) {
+    cell.addEventListener('click', handleCellInteraction);
+    cell.addEventListener('mouseover', handleCellInteraction);
 }
 
 initializeGrid(1)
