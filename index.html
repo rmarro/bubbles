@@ -16,22 +16,23 @@
             <option value="4">4</option>
             <option value="5">5</option>
         </select>
+        <span id="end-count-info"></span>
     </div>
     <div class="input-row">
         <span>Pop bubbles with:</span>
         <select id="pop-action" oninput="setPopAction(this.value)">
-            <option value="click">Click</option>
             <option value="mouseover">Mouseover (Hold on mobile)</option>
+            <option value="click">Click</option>
         </select>
     </div>
     <div class="input-row">
         <span>What style would you like?</span>
         <select oninput="setStyle(this.value)">
+            <option value="spa-2">Calm 1</option>
+            <option value="spa-1">Calm 2</option>
+            <option value="spa-3">Calm 3</option>
+            <option value="spa-4">Calm 4</option>
             <option value="rainbow">Rainbow</option>
-            <option value="spa-1">Spa 1</option>
-            <option value="spa-2">Spa 2</option>
-            <option value="spa-3">Spa 3</option>
-            <option value="spa-4">Spa 4</option>
             <option value="earth">Earth</option>
             <option value="air">Air</option>
             <option value="fire">Fire</option>
@@ -52,9 +53,13 @@
         <button onclick="restart()">Restart</button>
         <label for="reverse">Reverse Mode</label>
         <input id="reverse" type="checkbox" oninput="setReverseMode(this.checked)"/>
+        <label for="dark-mode">Dark Mode</label>
+        <input id="dark-mode" type="checkbox" oninput="setDarkMode(this.checked)"/>
     </div>
     <br/>
-    <div id="game-container"></div>
+    <div id="outer-container">
+    <div id="game-container" data-level="-1" class="spa-2"></div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
