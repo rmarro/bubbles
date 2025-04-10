@@ -55,6 +55,10 @@ span {
     .circley-squares & {
         border-radius: 25%;
     }
+
+    .lemons & {
+        border-radius: 50% 0%;
+    }
 }
 
 .rainbow {
