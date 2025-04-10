@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Bubbles</title>
 </head>
-<body>
+<body class="dark-mode">
     <div class="input-row">
         <span>How many bubbles would you like to start with?</span>
         <select id="bubble-count" oninput="initializeGrid(this.value)">
@@ -28,11 +28,11 @@
     <div class="input-row">
         <span>What style would you like?</span>
         <select oninput="setStyle(this.value)">
+            <option value="rainbow">Rainbow</option>
             <option value="spa-2">Calm 1</option>
             <option value="spa-1">Calm 2</option>
             <option value="spa-3">Calm 3</option>
             <option value="spa-4">Calm 4</option>
-            <option value="rainbow">Rainbow</option>
             <option value="earth">Earth</option>
             <option value="air">Air</option>
             <option value="fire">Fire</option>
@@ -47,6 +47,7 @@
             <option value="">Circles</option>
             <option value="squares">Squares</option>
             <option value="circley-squares">Circley-squares</option>
+            <option value="lemons">Lemons</option>
         </select>
     </div>
     <div class="input-row">
@@ -54,11 +55,11 @@
         <label for="reverse">Reverse Mode</label>
         <input id="reverse" type="checkbox" oninput="setReverseMode(this.checked)"/>
         <label for="dark-mode">Dark Mode</label>
-        <input id="dark-mode" type="checkbox" oninput="setDarkMode(this.checked)"/>
+        <input id="dark-mode" type="checkbox" checked="true" oninput="setDarkMode(this.checked)"/>
     </div>
     <br/>
     <div id="outer-container">
-        <div id="game-container" data-level="-1" class="spa-2"></div>
+        <div id="game-container" data-level="-1" class="rainbow"></div>
     </div>
     <script src="script.js"></script>
 </body>
