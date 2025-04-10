@@ -36,7 +36,7 @@ function setFilled(value) {
 }
 
 function setShape(value) {
-    gameContainer.classList.remove(...['squares','circley-squares']);
+    gameContainer.classList.remove(...['squares','circley-squares', 'lemons']);
     gameContainer.classList.add(value);
 }
 
